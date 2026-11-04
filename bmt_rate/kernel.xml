@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root versionMajor="1" versionMinor="6">
+  <kernel name="bmt_rate" language="ip_c" vlnv="user.org:kernel:bmt_rate:1.0" attributes="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" interrupt="true" hwControlProtocol="ap_ctrl_hs">
+    <ports>
+      <port name="s_axi_control" mode="slave" range="0x1000" dataWidth="32" portType="addressable" base="0x0"/>
+      <port name="m00_axi" mode="master" range="0xFFFFFFFFFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+    </ports>
+    <args>
+      <arg name="run_cycles" addressQualifier="0" id="0" port="s_axi_control" size="0x8" offset="0x010" type="ulong" hostOffset="0x0" hostSize="0x8"/>
+      <arg name="seed0" addressQualifier="0" id="1" port="s_axi_control" size="0x8" offset="0x018" type="ulong" hostOffset="0x0" hostSize="0x8"/>
+      <arg name="seed1" addressQualifier="0" id="2" port="s_axi_control" size="0x8" offset="0x020" type="ulong" hostOffset="0x0" hostSize="0x8"/>
+      <arg name="seed2" addressQualifier="0" id="3" port="s_axi_control" size="0x8" offset="0x028" type="ulong" hostOffset="0x0" hostSize="0x8"/>
+      <arg name="seed3" addressQualifier="0" id="4" port="s_axi_control" size="0x8" offset="0x030" type="ulong" hostOffset="0x0" hostSize="0x8"/>
+      <arg name="out" addressQualifier="1" id="5" port="m00_axi" size="0x8" offset="0x038" type="void*" hostOffset="0x0" hostSize="0x8"/>
+    </args>
+  </kernel>
+</root>
